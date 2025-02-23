@@ -1,0 +1,162 @@
+/* src/Index.css */
+
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #050a30;
+    color: #f0b31e;
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Company Name Styling */
+.company-name {
+    font-size: 3em;
+    font-weight: 600;
+    color: #00f7ff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Button Styles */
+.profile-button, .auth-buttons, .search-container, .product-section, .service-section, .course-section {
+    margin: 20px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.profile-button button,
+.auth-buttons button,
+#search-button,
+.product-section button,
+.service-section button,
+.course-section button {
+    background-color: #00f7ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-button button:hover,
+.auth-buttons button:hover,
+#search-button:hover,
+.product-section button:hover,
+.service-section button:hover,
+.course-section button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* Search Bar Styling */
+#search-bar {
+    padding: 10px 15px;
+    width: 250px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #00f7ff;
+}
+
+/* 3D Canvas Styling */
+#3d-canvas {
+    width: 100%;
+    height: 500px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections Styling */
+.section {
+    padding: 60px 0;
+    background-color: #1a1e3e;
+    border-radius: 15px;
+    margin: 40px 0;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+    animation: fadeInSection 1s ease-out;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #f0b31e;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section p {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.section button {
+    background-color: #f0b31e;
+    color: #050a30;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.section button:hover {
+    background-color: #00f7ff;
+    transform: scale(1.05);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-button button,
+    .auth-buttons button,
+    #search-button,
+    .section button {
+        width: 100%;
+        padding: 12px 25px;
+    }
+    #search-bar {
+        width: 200px;
+    }
+}

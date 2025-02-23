@@ -1,0 +1,75 @@
+/* src/Login.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #050a30; /* Dark background */
+    color: #f0b31e; /* Gold text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    text-align: center;
+    background-color: #1a1e3e; /* Dark blue */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-container .submit-btn,
+.otp-container .submit-btn {
+    background-color: #00f7ff;
+    color: #050a30;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-container .submit-btn:hover,
+.otp-container .submit-btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+.login-container .forgot-password {
+    margin-top: 20px;
+}
+
+.login-container .forgot-password a {
+    color: #f0b31e;
+    text-decoration: none;
+}
+
+.login-container .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.otp-container {
+    display: none;
+}

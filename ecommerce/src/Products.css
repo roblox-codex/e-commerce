@@ -1,0 +1,392 @@
+/* src/Products.css */
+
+/* Google Fonts Integration */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #050a30; /* Deep Space Blue */
+    color: #f0b31e; /* Glowing Gold */
+    overflow-x: hidden;
+    font-size: 16px;
+    perspective: 1500px; /* Adds 3D perspective for dynamic movement */
+    height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: #050a30;
+    color: #f0b31e;
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    animation: slideDown 1s ease-out;
+    transform-style: preserve-3d;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 60px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    border-radius: 15px;
+}
+
+/* Hover effects for logo */
+header .logo img:hover {
+    transform: rotate(360deg);
+    filter: brightness(1.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #f0b31e;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+/* Glowing hover effect for navigation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f0b31e;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    background-color: #00f7ff; /* Cyan Glow */
+}
+
+/* Cart Icon */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    color: #f0b31e;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.cart-icon:hover {
+
+    filter: brightness(1.2);
+}
+
+.cart-icon .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #f0b31e;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #050a30
+}
+
+/* Product Grid Section */
+.product-grid {
+    padding: 80px 20px;
+    text-align: center;
+    background: rgba(5, 10, 48, 0.9);
+    border-radius: 15px;
+    margin-top: 50px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8);
+    animation: fadeInGrid 1.2s ease-in-out;
+}
+
+.product-grid h2 {
+    font-size: 4rem;
+    color: #f0b31e;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.7);
+    animation: slideInFromTop 1s ease-out;
+}
+
+.product-grid p {
+    font-size: 1.2rem;
+    color: #f0b31e;
+    margin-bottom: 40px;
+    animation: fadeInText 1s ease-out;
+}
+
+/* Product Category */
+.product-category {
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-out forwards;
+}
+
+.product-category h3 {
+    font-size: 2.8rem;
+    color: #f0b31e;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.product-category p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f0b31e;
+    animation: fadeInText 1s ease-out;
+}
+
+/* Grid Layout for Products */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: #1a1e3e; /* Dark metallic blue */
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    animation: cardFloat 2s ease-in-out infinite;
+}
+
+.product-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.4);
+}
+
+.product-card h4 {
+    font-size: 1.7rem;
+    color: #f0b31e;
+    margin-top: 20px;
+    font-weight: 600;
+    animation: fadeInText 1s ease-out;
+}
+
+.product-card .price {
+    font-size: 1.4rem;
+    color: #f0b31e;
+    margin-top: 10px;
+    animation: fadeInText 1s ease-out;
+}
+
+.product-card .description {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 15px 0;
+    animation: fadeInText 1s ease-out;
+}
+
+/* Input and Button Styling */
+input[type="number"] {
+    width: 70px;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a2d52;
+    color: #f0b31e;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+input[type="number"]:focus {
+    transform: scale(1.05);
+    outline: none;
+}
+
+.add-to-cart {
+    background-color: #f0b31e;
+    color: #050a30;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease, box-shadow 0.4s ease;
+    animation: scaleUp 0.4s ease-out;
+}
+
+.add-to-cart:hover {
+    background-color: #00f7ff; /* Cyan Glow */
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.6);
+    transform: translateY(-4px);
+}
+
+.add-to-cart:active {
+    transform: scale(0.98);
+}
+
+/* 3D Effect on Scroll */
+header,
+.product-grid {
+    transform-style: preserve-3d;
+}
+
+header {
+    transition: transform 0.3s ease;
+}
+
+.product-grid {
+    transition: transform 0.3s ease;
+}
+
+body:hover header,
+body:hover .product-grid {
+    transform: rotateY(12deg) scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #050a30;
+    color: #f0b31e;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    animation: slideUp 1s ease-out;
+}
+
+footer ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+footer ul li a {
+    color: #f0b31e;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Keyframe Animations */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInGrid {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

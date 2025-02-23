@@ -1,0 +1,256 @@
+/* src/Home.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #050a30;
+    color: #f0b31e;
+    margin: 0;
+}
+
+/* Container for managing layout */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #050a30;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #f0b31e;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 0;
+    position: relative;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+header nav ul li .cart-icon {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li .cart-count {
+    background-color: #f0b31e;
+    border-radius: 50%;
+    color: #050a30;
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* Parallax Section */
+.parallax-section {
+    background: url('parallax.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.parallax-section .highlight {
+    color: #f0b31e;
+    font-weight: bold;
+}
+
+/* Feature Icons Section */
+.feature-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #1d2a3e;
+    color: #f0b31e;
+}
+
+.feature-icons .icon {
+    text-align: center;
+}
+
+.feature-icons .icon i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Hero Text Section */
+.hero-text {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Hover Effects Section */
+.hover-effect-container,
+.hover1-effect-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hover-effect {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+}
+
+/* Product Cards Section */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #1a1f3d;
+}
+
+.product-card {
+    background-color: #2a2f4b;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.product-card .product-front,
+.product-card .product-back {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card .product-front img {
+    width: 100%;
+    border-bottom: 1px solid #f0b31e;
+}
+
+.product-card .product-front h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+}
+
+.product-card .product-front p {
+    font-size: 1.2rem;
+    color: #aab2cc;
+}
+
+.product-card .product-back {
+    display: none;
+}
+
+.product-card:hover .product-front {
+    display: none;
+}
+
+.product-card:hover .product-back {
+    display: block;
+}
+
+.product-card .btn {
+    background-color: #f0b31e;
+    color: #050a30;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.product-card .btn:hover {
+    background-color: #d1a22e;
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #121731;
+    color: #f0b31e;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta .btn {
+    background-color: #f0b31e;
+    color: #050a30;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta .btn:hover {
+    background-color: #ffc107;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1a1f3d;
+    color: #f0b31e;
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #f0b31e;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}

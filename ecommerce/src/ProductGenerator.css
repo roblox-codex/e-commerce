@@ -1,0 +1,199 @@
+/* src/ProductGenerator.css */
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background: #050a30;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 10px 0 0;
+}
+
+/* Section Styling */
+section {
+    margin: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    color: #050a30;
+    margin-bottom: 20px;
+}
+
+/* How It Works Section */
+#how-it-works ol {
+    padding: 0;
+    list-style: none;
+}
+
+#how-it-works ol li {
+    margin-bottom: 20px;
+}
+
+#how-it-works ol li h3 {
+    color: #050a30;
+}
+
+/* Form Styling */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.tooltip {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Buttons */
+button {
+    background: #050a30;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #f0b31e;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* AI Prototype Section */
+.prototype-display {
+    text-align: center;
+}
+
+.prototype-display img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.feedback-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.feedback-buttons .feedback-btn {
+    margin: 0 10px;
+}
+
+/* Finalize Design Section */
+.finalize-btn {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Pricing Plans Section */
+#pricing-plans ul {
+    list-style: none;
+    padding: 0;
+}
+
+#pricing-plans ul li {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+}
+
+#contact a {
+    color: #050a30;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background: #050a30;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}

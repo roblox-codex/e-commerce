@@ -1,0 +1,143 @@
+/* src/courses.css */
+
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #050a30;
+    color: #f0b31e;
+    overflow-x: hidden;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Course Title */
+.course-title {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #00f7ff;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Course Description */
+.course-description {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Button Styles */
+.enroll-button, .other-courses-button {
+    background-color: #00f7ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.enroll-button:hover, .other-courses-button:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+/* Suggested Courses Section */
+.suggested-courses {
+    margin-top: 50px;
+    background-color: #1a1e3e;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+    animation: fadeInSection 1s ease-out;
+}
+
+.suggested-courses h2 {
+    font-size: 2.5rem;
+    color: #f0b31e;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.suggested-courses p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.suggested-courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.suggested-courses ul li {
+    font-size: 1.2rem;
+    color: #f0b31e;
+    margin: 10px 0;
+}
+
+.suggested-courses ul li a {
+    color: #00f7ff;
+    text-decoration: none;
+}
+
+.suggested-courses ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .enroll-button, .other-courses-button {
+        width: 100%;
+        padding: 12px 25px;
+    }
+
+    .course-description {
+        font-size: 1em;
+    }
+
+    .suggested-courses h2 {
+        font-size: 2rem;
+    }
+
+    .suggested-courses p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,229 @@
+/* src/AIproduct.css */
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Font */
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #050a30;
+    color: #f0b31e;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #050a30, #282828);
+    color: #f0b31e;
+    padding: 60px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    animation: fadeInHeader 1s ease-out;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    color: #00f5f5; /* Cyan */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7), 0px 0px 20px rgba(0, 255, 255, 0.5);
+}
+
+p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #ccc;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+/* Form Section */
+#product-idea {
+    background: #222;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    margin-top: 80px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+#product-idea h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    color: #f0b31e;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 10px rgba(240, 179, 30, 0.7);
+}
+
+form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    color: #f0b31e;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 12px;
+    background: #333;
+    color: #ddd;
+    border: 1px solid #444;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.2);
+}
+
+input:focus, textarea:focus {
+    border-color: #00f5f5;
+    background: #444;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.6);
+}
+
+button {
+    background-color: #f0b31e;
+    color: #050a30;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease, transform 0.2s ease;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background-color: #c68f19;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 20px rgba(240, 179, 30, 0.8);
+}
+
+button:active {
+    background-color: #a77f13;
+    transform: translateY(3px);
+}
+
+/* Prototype Display Section */
+#prototype-display {
+    background: #282828;
+    padding: 50px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-out;
+}
+
+#prototype-display h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    color: #00f5f5;
+    margin-bottom: 30px;
+    text-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+}
+
+#3d-model-container {
+    width: 100%;
+    height: 500px;
+    background-color: #333;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+}
+
+#3d-model-container:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+/* Feedback Section */
+#feedback-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.feedback-btn {
+    background-color: #f0b31e;
+    color: #050a30;
+    padding: 16px 24px;
+    font-size: 18px;
+    width: 45%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.feedback-btn:hover {
+    background-color: #c68f19;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px rgba(240, 179, 30, 0.8);
+}
+
+.feedback-btn:active {
+    background-color: #a77f13;
+    transform: translateY(3px);
+}
+
+/* Tooltip Styling */
+.tooltip {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+    display: block;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
